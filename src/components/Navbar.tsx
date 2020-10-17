@@ -24,7 +24,7 @@ const Navbar = () => {
   };
   return (
     <div className={classes.root}>
-      <AppBar className={classes.appBar} position="static">
+      <AppBar className={classes.appBar} position="fixed">
         <Tabs className={classes.tabs} value={value} onChange={handleChange} centered>
           <Tab label="Top" />
           <Tab label="About" />
