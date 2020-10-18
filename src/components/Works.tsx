@@ -119,7 +119,7 @@ const Works = () => {
     },
   ];
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="works">
       <Typography className={classes.title}>Works</Typography>
       <Grid className={classes.grid} container spacing={3}>
         {works.map((work) => {

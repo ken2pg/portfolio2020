@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 const Top = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="top">
       <Typography className={classes.title}>Kento's Portfolio Site</Typography>
     </div>
   );
