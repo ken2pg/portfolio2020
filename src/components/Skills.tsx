@@ -5,8 +5,7 @@ import { Card, Grid, Paper, Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
-    height: '500px',
-    borderBottom: '1px solid gray',
+    height: '100%',
   },
   title: {
     display: 'flex',
@@ -14,9 +13,30 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginTop: '50px',
     marginBottom: '30px',
     fontSize: '48px',
+    ['@media(max-width:1024px)']: {
+      fontSize: '44px',
+    },
   },
   grid: {
-    width: '50%',
+    width: '700px',
+    ['@media(max-width:1024px)']: {
+      width: '95%',
+    },
+    ['@media(max-width:768px)']: {
+      display: 'none',
+    },
+    margin: '0 auto',
+  },
+  grid2: {
+    width: '95%',
+    display: 'none',
+    ['@media(max-width:1024px)']: {
+      width: '95%',
+    },
+    ['@media(max-width:768px)']: {
+      display: 'inline-block',
+      margin: '0 auto',
+    },
     margin: '0 auto',
   },
   gridItem: {
@@ -43,6 +63,15 @@ const Skills = () => {
         {skills.map((skill) => {
           return (
             <Grid item xs={6} className={classes.gridItem}>
+              ・{skill.name}　{skill.period}
+            </Grid>
+          );
+        })}
+      </Grid>
+      <Grid className={classes.grid2} container spacing={3}>
+        {skills.map((skill) => {
+          return (
+            <Grid item xs={12} className={classes.gridItem}>
               ・{skill.name}　{skill.period}
             </Grid>
           );
