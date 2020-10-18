@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { makeStyles, Theme } from '@material-ui/core/styles';
+import { makeStyles, Theme, useTheme } from '@material-ui/core/styles';
 import {
+  Button,
   Card,
   CardHeader,
   CardMedia,
   CardContent,
   Chip,
   Grid,
+  MobileStepper,
   Paper,
   Typography,
 } from '@material-ui/core';
+
+import { KeyboardArrowLeft, KeyboardArrowRight } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -56,9 +60,23 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontSize: '16px',
     margin: '10px 10px',
   },
+  img: {
+    // overflow: 'hidden',
+    width: '100%',
+  },
 }));
 const Works = () => {
   const classes = useStyles();
+  const theme = useTheme();
+  //   const [step, setStep] = React.useState(0);
+  //   const handleNext = () => {
+  //     setStep((preStep) => preStep + 1);
+  //   };
+
+  //   const handleBack = () => {
+  //     setStep((preStep) => preStep - 1);
+  //   };
+
   const works = [
     {
       name: 'BookMark App',
@@ -71,6 +89,7 @@ const Works = () => {
         'Vercel(hosting)',
         'Adobe XD',
       ],
+      imgList: ['/static/img1.png', '/static/img2.png', '/static/img3.png'],
       detail: (
         <>
           メモ機能がついたオンラインブックマークアプリを作成しました。
@@ -89,6 +108,7 @@ const Works = () => {
     {
       name: '物件検索サイト Patimo',
       label: ['JavaScript', 'Vue.js', 'Vuetify', '物件検索Api', 'Firebase(hosting)', 'Figuma'],
+      imgList: [],
       detail: (
         <>
           物件探しが初めての大学生向けの物件検索サイトを4人のチーム（インターン）で、Vue.jsや会社の物件API
@@ -118,15 +138,49 @@ const Works = () => {
       ),
     },
   ];
+
   return (
     <div className={classes.root} id="works">
       <Typography className={classes.title}>Works</Typography>
       <Grid className={classes.grid} container spacing={3}>
         {works.map((work) => {
+          const [step, setStep] = React.useState(0);
+          const handleNext = () => {
+            setStep((preStep) => preStep + 1);
+          };
+
+          const handleBack = () => {
+            setStep((preStep) => preStep - 1);
+          };
           return (
             <Grid item xs={6} className={classes.gridItem}>
               <Card>
                 <CardHeader title={work.name}></CardHeader>
+                <img className={classes.img} src={work.imgList[step]} />
+                {work.imgList.length != 0 && (
+                  <MobileStepper
+                    steps={work.imgList.length}
+                    position="static"
+                    variant="text"
+                    activeStep={step}
+                    nextButton={
+                      <Button
+                        size="small"
+                        onClick={handleNext}
+                        disabled={step === work.imgList.length - 1}
+                      >
+                        Next
+                        {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+                      </Button>
+                    }
+                    backButton={
+                      <Button size="small" onClick={handleBack} disabled={step === 0}>
+                        {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+                        Back
+                      </Button>
+                    }
+                  />
+                )}
                 <CardContent className={classes.content}>
                   <Typography>{work.detail}</Typography>
                   <br />
@@ -146,10 +200,44 @@ const Works = () => {
       </Grid>
       <Grid className={classes.grid2} container spacing={3}>
         {works.map((work) => {
+          const [step, setStep] = React.useState(0);
+          const handleNext = () => {
+            setStep((preStep) => preStep + 1);
+          };
+
+          const handleBack = () => {
+            setStep((preStep) => preStep - 1);
+          };
           return (
             <Grid item xs={12} className={classes.gridItem}>
               <Card>
                 <CardHeader title={work.name}></CardHeader>
+                <img className={classes.img} src={work.imgList[step]} />
+                {work.imgList.length != 0 && (
+                  <MobileStepper
+                    steps={work.imgList.length}
+                    position="static"
+                    variant="text"
+                    activeStep={step}
+                    nextButton={
+                      <Button
+                        size="small"
+                        onClick={handleNext}
+                        disabled={step === work.imgList.length - 1}
+                      >
+                        Next
+                        {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+                      </Button>
+                    }
+                    backButton={
+                      <Button size="small" onClick={handleBack} disabled={step === 0}>
+                        {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+                        Back
+                      </Button>
+                    }
+                  />
+                )}
+
                 <CardContent className={classes.content}>
                   <Typography>{work.detail}</Typography>
                   <br />
