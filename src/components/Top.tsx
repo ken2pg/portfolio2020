@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 
-const Image = '/static/img1.png';
+// const Image = '/static/img1.png';
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
