@@ -6,8 +6,7 @@ import Link from '@material-ui/core/Link';
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
-    height: '1000px',
-    borderBottom: '1px solid gray',
+    height: '100%',
   },
   title: {
     display: 'flex',
@@ -15,22 +14,34 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginTop: '50px',
     marginBottom: '30px',
     fontSize: '48px',
+    ['@media(max-width:1024px)']: {
+      fontSize: '44px',
+    },
   },
   text: {
-    // width: '50%',
+    width: '700px',
     margin: '0 auto',
-    fontSize: '24px',
+    fontSize: '20px',
     display: 'flex',
-    justifyContent: 'center',
+    // justifyContent: 'center',
     marginBottom: '30px',
+
+    ['@media(max-width:1024px)']: {
+      width: '95%',
+      fontSize: '20px',
+    },
   },
   text2: {
     width: '700px',
     margin: '0 auto',
-    fontSize: '18px',
+    fontSize: '20px',
     display: 'flex',
     justifyContent: 'center',
     marginBottom: '30px',
+    ['@media(max-width:1024px)']: {
+      width: '95%',
+      fontSize: '20px',
+    },
   },
 }));
 const About = () => {
@@ -40,18 +51,19 @@ const About = () => {
       <Typography className={classes.title}>About</Typography>
       <Typography className={classes.text}>名前：けんと</Typography>
       <Typography className={classes.text}>職業：情報科学系の大学院　修士1年</Typography>
+      <Typography className={classes.text}>研究：深層学習、行動認識</Typography>
       <Typography className={classes.text}>
         趣味：webアプリ開発、イラスト、音楽、最近は筋トレ
       </Typography>
       <Typography className={classes.text}>
         Github：
-        <Link href="https://github.com/ken2pg">https://github.com/ken2pg</Link>
+        <Link href="https://github.com/ken2pg">Githubページ</Link>
       </Typography>
       <br />
       <br />
       <Typography className={classes.text}>インターン経験：</Typography>
       <Typography className={classes.text}>
-        インターン：株式会社いい生活　 サマーインターン(有給) 2020/08
+        株式会社いい生活　 サマーインターン(有給) 2020/08
       </Typography>
       <Typography className={classes.text2}>
         Vuejsと会社のAPIを用いてチームで不動産サイトを開発しました。
