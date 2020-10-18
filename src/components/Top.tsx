@@ -19,7 +19,7 @@ const Top = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Typography className={classes.title}>Ken2's Portfolio Site in 2020.</Typography>
+      <Typography className={classes.title}>Kento's Portfolio Site.</Typography>
     </div>
   );
 };
