@@ -14,8 +14,7 @@ import {
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
-    height: '1000px',
-    borderBottom: '1px solid gray',
+    height: '100%',
   },
   title: {
     display: 'flex',
@@ -29,6 +28,17 @@ const useStyles = makeStyles((theme: Theme) => ({
     margin: '0 auto',
     ['@media(max-width:1024px)']: {
       width: '95%',
+    },
+    ['@media(max-width:768px)']: {
+      display: 'none',
+    },
+  },
+  grid2: {
+    width: '95%',
+    margin: '0 auto',
+    display: 'none',
+    ['@media(max-width:768px)']: {
+      display: 'inline-block',
     },
   },
   gridItem: {
@@ -115,6 +125,29 @@ const Works = () => {
         {works.map((work) => {
           return (
             <Grid item xs={6} className={classes.gridItem}>
+              <Card>
+                <CardHeader title={work.name}></CardHeader>
+                <CardContent className={classes.content}>
+                  <Typography>{work.detail}</Typography>
+                  <br />
+                  使用技術：
+                  <br />
+                  <br />
+                  <div className={classes.label}>
+                    {work.label.map((value) => {
+                      return <Chip label={value} className={classes.label2} />;
+                    })}
+                  </div>
+                </CardContent>
+              </Card>
+            </Grid>
+          );
+        })}
+      </Grid>
+      <Grid className={classes.grid2} container spacing={3}>
+        {works.map((work) => {
+          return (
+            <Grid item xs={12} className={classes.gridItem}>
               <Card>
                 <CardHeader title={work.name}></CardHeader>
                 <CardContent className={classes.content}>
