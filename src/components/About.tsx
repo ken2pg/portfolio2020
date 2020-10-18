@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
     ['@media(max-width:1024px)']: {
       width: '95%',
-      fontSize: '20px',
+      fontSize: '18px',
     },
   },
   text2: {
@@ -40,14 +40,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginBottom: '30px',
     ['@media(max-width:1024px)']: {
       width: '95%',
-      fontSize: '20px',
+      fontSize: '18px',
     },
   },
 }));
 const About = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="about">
       <Typography className={classes.title}>About</Typography>
       <Typography className={classes.text}>名前：けんと</Typography>
       <Typography className={classes.text}>職業：情報科学系の大学院　修士1年</Typography>

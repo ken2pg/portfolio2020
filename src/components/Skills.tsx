@@ -41,6 +41,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   gridItem: {
     fontSize: '20px',
+    ['@media(max-width:1024px)']: {
+      fontSize: '18px',
+    },
   },
 }));
 const Skills = () => {
@@ -57,7 +60,7 @@ const Skills = () => {
     { name: 'Git/Github', period: '' },
   ];
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="skills">
       <Typography className={classes.title}>Skills</Typography>
       <Grid className={classes.grid} container spacing={3}>
         {skills.map((skill) => {
