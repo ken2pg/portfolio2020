@@ -11,6 +11,7 @@ import {
   MobileStepper,
   Paper,
   Typography,
+  Link,
 } from '@material-ui/core';
 
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@material-ui/icons';
@@ -98,6 +99,21 @@ const Works = () => {
           <br />
           私自身、よくプログラミングサイト(Qiitaやstack overflowなど)によくお世話になるので、
           重要なコードをメモしておきたいと思ったため追加しました。
+          <br />
+          <br />
+          以下のメールアドレスとパスワードでログインできます。
+          <br />
+          <br />
+          test@gmail.com
+          <br />
+          <br />
+          abc123EFG456
+          <br />
+          <br />
+          <Link href="https://book-mark-app.vercel.app">BookMarkAppサイト</Link>
+          <br />
+          <br />
+          <Link href="https://book-mark-app.vercel.app">Github</Link>
         </>
       ),
     },
@@ -130,6 +146,9 @@ const Works = () => {
           <br />
           VueやVuetifyを使った実践的な開発が初めてだったので、CSS、クエリ、APIの使い方に苦戦しましたが、
           チームの人やメンター相談しながら最終的には完成させることができました。
+          <br />
+          <br />
+          ※APIが会社の物であるため、コードとサイトは公開しておりません。
         </>
       ),
     },
