@@ -28,7 +28,7 @@ const Navbar = () => {
       <AppBar className={classes.appBar} position="fixed">
         <Tabs className={classes.tabs} onChange={handleChange} centered>
           <Link activeClass="active" to="top" spy={true} smooth={true} offset={-200} duration={500}>
-            <Tab label="Top" />
+            <Tab label="Top" textColor="white" />
           </Link>
           <Link
             activeClass="active"
@@ -38,7 +38,7 @@ const Navbar = () => {
             offset={-100}
             duration={500}
           >
-            <Tab label="About" />
+            <Tab label="About" textColor="white" />
           </Link>
           <Link
             activeClass="active"
@@ -48,7 +48,7 @@ const Navbar = () => {
             offset={-100}
             duration={500}
           >
-            <Tab label="Skills" />
+            <Tab label="Skills" textColor="white" />
           </Link>
           <Link
             activeClass="active"
@@ -58,7 +58,7 @@ const Navbar = () => {
             offset={-100}
             duration={500}
           >
-            <Tab label="Works" />
+            <Tab label="Works" textColor="white" />
           </Link>
         </Tabs>
       </AppBar>
