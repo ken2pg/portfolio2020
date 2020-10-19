@@ -27,7 +27,7 @@ const Navbar = () => {
     <div className={classes.root}>
       <AppBar className={classes.appBar} position="fixed">
         <Tabs className={classes.tabs} onChange={handleChange} centered>
-          <Link activeClass="active" to="top" spy={true} smooth={true} offset={-200} duration={500}>
+          <Link activeClass="active" to="top" spy={true} smooth={true} offset={0} duration={500}>
             <Tab label="Top" textColor="white" />
           </Link>
           <Link
