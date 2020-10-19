@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     margin: '0 auto',
   },
   content: {
-    fontSize: '16px',
+    fontSize: '18px',
   },
   label: {
     width: '100%',
@@ -176,10 +176,12 @@ const Works = () => {
                   <MobileStepper
                     steps={work.imgList.length}
                     position="static"
-                    variant="text"
+                    variant="dots"
                     activeStep={step}
                     nextButton={
                       <Button
+                        color="primary"
+                        variant="contained"
                         size="small"
                         onClick={handleNext}
                         disabled={step === work.imgList.length - 1}
@@ -189,7 +191,13 @@ const Works = () => {
                       </Button>
                     }
                     backButton={
-                      <Button size="small" onClick={handleBack} disabled={step === 0}>
+                      <Button
+                        color="primary"
+                        variant="contained"
+                        size="small"
+                        onClick={handleBack}
+                        disabled={step === 0}
+                      >
                         {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
                         Back
                       </Button>
@@ -197,7 +205,7 @@ const Works = () => {
                   />
                 )}
                 <CardContent className={classes.content}>
-                  <Typography>{work.detail}</Typography>
+                  <Typography className={classes.content}>{work.detail}</Typography>
                   <br />
                   使用技術：
                   <br />
@@ -232,10 +240,12 @@ const Works = () => {
                   <MobileStepper
                     steps={work.imgList.length}
                     position="static"
-                    variant="text"
+                    variant="dots"
                     activeStep={step}
                     nextButton={
                       <Button
+                        color="primary"
+                        variant="contained"
                         size="small"
                         onClick={handleNext}
                         disabled={step === work.imgList.length - 1}
@@ -245,7 +255,13 @@ const Works = () => {
                       </Button>
                     }
                     backButton={
-                      <Button size="small" onClick={handleBack} disabled={step === 0}>
+                      <Button
+                        color="primary"
+                        variant="contained"
+                        size="small"
+                        onClick={handleBack}
+                        disabled={step === 0}
+                      >
                         {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
                         Back
                       </Button>
@@ -254,7 +270,7 @@ const Works = () => {
                 )}
 
                 <CardContent className={classes.content}>
-                  <Typography>{work.detail}</Typography>
+                  <Typography className={classes.content}>{work.detail}</Typography>
                   <br />
                   使用技術：
                   <br />
