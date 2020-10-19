@@ -113,7 +113,7 @@ const Works = () => {
           <Link href="https://book-mark-app.vercel.app">BookMarkAppサイト</Link>
           <br />
           <br />
-          <Link href="https://book-mark-app.vercel.app">Github</Link>
+          <Link href="https://github.com/ken2pg/BookMark-App">Github</Link>
         </>
       ),
     },
