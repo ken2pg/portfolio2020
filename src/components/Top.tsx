@@ -7,20 +7,20 @@ const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
     height: '100%',
-    // borderBottom: '1px solid gray',
-    // backgroundImage: `url(${Image})`,
-    // backgroundSize: '100% 100%',
-    // ['@media(max-width:1024px)']: {
-    //   height: '300px',
-    // },
+    background: '#e3f2fd',
+    // '#e3f2fd' &&
+    // '-webkit-linear-gradient(to top, #e3f2fd, #ffffff)' &&
+    // 'linear-gradient(to top,#e3f2fd, #ffffff)',
   },
   title: {
     display: 'flex',
-    margin: '190px 0',
+    padding: '190px 0',
     justifyContent: 'center',
     // lineHeight: '500px',
     fontSize: '48px',
-    // color: 'White',
+    color: '#1769aa',
+    fontWeight: 'bold',
+    textAlign: 'center',
     ['@media(max-width:1024px)']: {
       width: '95%',
       fontSize: '40px',
@@ -32,7 +32,7 @@ const Top = () => {
   const classes = useStyles();
   return (
     <div className={classes.root} id="top">
-      <Typography className={classes.title}>Kento's Portfolio Site</Typography>
+      <Typography className={classes.title}>Kento's Portfolio Site.</Typography>
     </div>
   );
 };
