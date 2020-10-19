@@ -28,25 +28,25 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontSize: '48px',
   },
   grid: {
-    width: '70%',
+    width: '800px',
     margin: '0 auto',
     ['@media(max-width:1024px)']: {
-      width: '95%',
-    },
-    ['@media(max-width:768px)']: {
       display: 'none',
     },
   },
   grid2: {
-    width: '95%',
+    width: '100%',
     margin: '0 auto',
     display: 'none',
-    ['@media(max-width:768px)']: {
+    ['@media(max-width:1024px)']: {
       display: 'inline-block',
     },
   },
   gridItem: {
     fontSize: '20px',
+  },
+  card: {
+    margin: '0 auto',
   },
   content: {
     fontSize: '16px',
@@ -61,22 +61,18 @@ const useStyles = makeStyles((theme: Theme) => ({
     margin: '10px 10px',
   },
   img: {
-    // overflow: 'hidden',
     width: '100%',
+    maxWidth: '100%',
+    height: 'auto',
+    backfaceVisibility: 'hidden',
+
+    // overflow: 'hidden',
+    // width: '100%',
   },
 }));
 const Works = () => {
   const classes = useStyles();
   const theme = useTheme();
-  //   const [step, setStep] = React.useState(0);
-  //   const handleNext = () => {
-  //     setStep((preStep) => preStep + 1);
-  //   };
-
-  //   const handleBack = () => {
-  //     setStep((preStep) => preStep - 1);
-  //   };
-
   const works = [
     {
       name: 'BookMark App',
@@ -132,7 +128,7 @@ const Works = () => {
           <br />
           私は、検索結果画面/詳細検索とクエリの受け取り部分の実装を担当しました。
           <br />
-          Vuetifyを使うのが初めてだったので、CSSやクエリやAPIの使い方に苦戦しましたが、
+          VueやVuetifyを使った実践的な開発が初めてだったので、CSS、クエリ、APIの使い方に苦戦しましたが、
           チームの人やメンター相談しながら最終的には完成させることができました。
         </>
       ),
@@ -153,8 +149,8 @@ const Works = () => {
             setStep((preStep) => preStep - 1);
           };
           return (
-            <Grid item xs={6} className={classes.gridItem}>
-              <Card>
+            <Grid item xs={12} className={classes.gridItem}>
+              <Card className={classes.card}>
                 <CardHeader title={work.name}></CardHeader>
                 <img className={classes.img} src={work.imgList[step]} />
                 {work.imgList.length != 0 && (
@@ -210,7 +206,7 @@ const Works = () => {
           };
           return (
             <Grid item xs={12} className={classes.gridItem}>
-              <Card>
+              <Card className={classes.card}>
                 <CardHeader title={work.name}></CardHeader>
                 <img className={classes.img} src={work.imgList[step]} />
                 {work.imgList.length != 0 && (
