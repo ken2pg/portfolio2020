@@ -49,11 +49,10 @@ const useStyles = makeStyles((theme: Theme) => ({
 const Skills = () => {
   const classes = useStyles();
   const skills = [
-    { name: 'JavaScript', period: '7ヵ月' },
-    { name: 'TypeScript', period: '半年' },
-    { name: 'React', period: '6ヵ月' },
+    { name: 'JavaScript/TypeScript', period: '8ヵ月' },
+    { name: 'React', period: '7ヵ月' },
     { name: 'Vue', period: '1ヵ月' },
-    { name: 'Redux(Redux toolkit)', period: '5ヵ月' },
+    { name: 'Redux(Redux toolkit)', period: '6ヵ月' },
     { name: 'NextJs', period: '2ヵ月' },
     { name: 'Firebase', period: '' },
     { name: 'Python', period: '2年' },
