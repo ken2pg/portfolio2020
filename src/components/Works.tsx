@@ -86,7 +86,20 @@ const Works = () => {
         'Vercel(hosting)',
         'Adobe XD',
       ],
-      imgList: ['/static/img1.png', '/static/img2.png', '/static/img3.png', '/static/img5.png'],
+      imgList: [
+        '/static/img1.png',
+        '/static/img2.png',
+        '/static/img3.png',
+        '/static/img6.png',
+        '/static/img7.png',
+        // '/static/img9.png',
+        // '/static/img10.png',
+        // '/static/img8.png',
+        // '/static/img11.png',
+        // '/static/img12.png',
+        '/static/img4.png',
+        '/static/img5.png',
+      ],
       detail: (
         <>
           メモ機能がついたオンラインブックマークアプリを作成しました。
