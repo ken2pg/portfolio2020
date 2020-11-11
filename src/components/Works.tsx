@@ -86,7 +86,7 @@ const Works = () => {
         'Vercel(hosting)',
         'Adobe XD',
       ],
-      imgList: ['/static/img1.png', '/static/img2.png', '/static/img3.png'],
+      imgList: ['/static/img1.png', '/static/img2.png', '/static/img3.png', '/static/img5.png'],
       detail: (
         <>
           メモ機能がついたオンラインブックマークアプリを作成しました。
@@ -99,9 +99,9 @@ const Works = () => {
           <br />
           私自身、よくプログラミングサイト(Qiitaやstack overflowなど)によくお世話になるので、
           重要なコードをメモしておきたいと思ったため追加しました。
-          <br />
-          <br />
-          以下のメールアドレスとパスワードでログインできます。
+          {/* <br />
+          <br /> */}
+          {/* 以下のメールアドレスとパスワードでログインできます。
           <br />
           <br />
           test@gmail.com
@@ -109,8 +109,8 @@ const Works = () => {
           <br />
           abc123EFG456
           <br />
-          <br />
-          <Link href="https://book-mark-app.vercel.app">BookMarkAppサイト</Link>
+          <br /> */}
+          {/* <Link href="https://book-mark-app.vercel.app">BookMarkAppサイト</Link> */}
           <br />
           <br />
           <Link href="https://github.com/ken2pg/BookMark-App">Github</Link>
@@ -144,11 +144,11 @@ const Works = () => {
           <br />
           私は、検索結果画面/詳細検索とクエリの受け取り部分の実装を担当しました。
           <br />
-          VueやVuetifyを使った実践的な開発が初めてだったので、CSS、クエリ、APIの使い方に苦戦しましたが、
+          VueやVuetifyを使った実践的な開発が初めてだったので、Vuetifyを使った開発や、Vuejsのクエリ、APIの使い方に苦戦しましたが、
           チームの人やメンター相談しながら最終的には完成させることができました。
           <br />
           <br />
-          ※APIが会社の物であるため、コードとサイトは公開しておりません。
+          ※APIが会社の物であり守秘義務のため、コードと写真は公開しておりません。
         </>
       ),
     },
