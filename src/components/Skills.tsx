@@ -42,7 +42,14 @@ const useStyles = makeStyles((theme: Theme) => ({
       justifyContent: 'space-around',
       margin: '0 auto',
     },
-    margin: '0 auto',
+  },
+  grid3: {
+    width: '70%',
+    marginRight: 'auto',
+    ['@media(max-width:540px)']: {
+      width: '100%',
+      marginRight: '0',
+    },
   },
   gridItem: {
     fontSize: '20px',
@@ -64,7 +71,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
   },
   gridItem4: {
-    textAlign: 'right',
+    textAlign: 'left',
     fontSize: '20px',
     ['@media(max-width:1024px)']: {
       fontSize: '18px',
@@ -101,20 +108,22 @@ const Skills = () => {
           );
         })}
       </Grid>
-      <Grid className={classes.grid2} container spacing={3}>
-        {skills.map((skill) => {
-          return (
-            <>
-              <Grid item xs={6} className={classes.gridItem3}>
-                ・{skill.name}
-              </Grid>
-              <Grid item xs={6} className={classes.gridItem4}>
-                　{skill.period}
-              </Grid>
-            </>
-          );
-        })}
-      </Grid>
+      <div className={classes.grid2}>
+        <Grid className={classes.grid3} container spacing={3}>
+          {skills.map((skill) => {
+            return (
+              <>
+                <Grid item xs={6} className={classes.gridItem3}>
+                  ・{skill.name}
+                </Grid>
+                <Grid item xs={6} className={classes.gridItem4}>
+                  　{skill.period}
+                </Grid>
+              </>
+            );
+          })}
+        </Grid>
+      </div>
     </div>
   );
 };

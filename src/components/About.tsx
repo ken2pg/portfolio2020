@@ -113,24 +113,31 @@ const About = () => {
           {contents.map((content) => {
             return (
               <>
-                <Grid item xs={6} className={classes.gridItem}>
-                  <Typography className={classes.text}>{content.type}：</Typography>
+                <Grid item xs={12} className={classes.gridItem}>
+                  <Typography className={classes.text}>
+                    {content.type}：{content.text}
+                  </Typography>
                 </Grid>
-                <Grid item xs={6} className={classes.gridItem2}>
-                  <Typography className={classes.text}>{content.text}</Typography>
+                {/* <Grid item xs={6} className={classes.gridItem2}>
+                  <Typography className={classes.text}></Typography>
                 </Grid>
+                <Grid item xs={4} className={classes.gridItem2}></Grid> */}
               </>
             );
           })}
           <>
-            <Grid item xs={6} className={classes.gridItem}>
+            <Grid item xs={12} className={classes.gridItem}>
               Github：
-            </Grid>
-            <Grid item xs={6} className={classes.gridItem2}>
               <Link underline="none" href="https://github.com/ken2pg">
                 Githubページ
               </Link>
             </Grid>
+            {/* <Grid item xs={6} className={classes.gridItem2}>
+              <Link underline="none" href="https://github.com/ken2pg">
+                Githubページ
+              </Link>
+            </Grid>
+            <Grid item xs={4} className={classes.gridItem2}></Grid> */}
           </>
         </Grid>
       </div>
