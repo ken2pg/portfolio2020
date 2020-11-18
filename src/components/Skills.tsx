@@ -9,18 +9,22 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   title: {
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'left',
     marginTop: '50px',
     marginBottom: '30px',
     fontSize: '48px',
+    borderBottom: '3px solid black',
+    width: '700px',
+    margin: '0 auto',
     ['@media(max-width:1024px)']: {
-      fontSize: '44px',
+      width: '90%',
     },
   },
   grid: {
     width: '700px',
+    wordWrap: 'break-word',
     ['@media(max-width:1024px)']: {
-      width: '95%',
+      width: '90%',
     },
     ['@media(max-width:768px)']: {
       display: 'none',
@@ -28,13 +32,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     margin: '0 auto',
   },
   grid2: {
-    width: '95%',
+    width: '90%',
     display: 'none',
     ['@media(max-width:1024px)']: {
-      width: '95%',
+      width: '90%',
     },
     ['@media(max-width:768px)']: {
-      display: 'inline-block',
+      display: 'flex',
+      justifyContent: 'space-around',
       margin: '0 auto',
     },
     margin: '0 auto',
@@ -45,18 +50,39 @@ const useStyles = makeStyles((theme: Theme) => ({
       fontSize: '18px',
     },
   },
+  gridItem2: {
+    textAlign: 'right',
+    fontSize: '20px',
+    ['@media(max-width:1024px)']: {
+      fontSize: '18px',
+    },
+  },
+  gridItem3: {
+    fontSize: '20px',
+    ['@media(max-width:1024px)']: {
+      fontSize: '18px',
+    },
+  },
+  gridItem4: {
+    textAlign: 'right',
+    fontSize: '20px',
+    ['@media(max-width:1024px)']: {
+      fontSize: '18px',
+    },
+  },
 }));
 const Skills = () => {
   const classes = useStyles();
   const skills = [
-    { name: 'JavaScript/TypeScript', period: '8ヵ月' },
+    { name: 'JavaScript', period: '2ヵ月' },
+    { name: 'TypeScript', period: '6ヵ月' },
     { name: 'React', period: '7ヵ月' },
-    { name: 'Vue', period: '1ヵ月' },
-    { name: 'Redux(Redux toolkit)', period: '6ヵ月' },
-    { name: 'NextJs', period: '2ヵ月' },
-    { name: 'Firebase', period: '' },
+    { name: 'Vue.js', period: '1ヵ月' },
+    { name: 'Redux', period: '6ヵ月' },
+    { name: 'Next.js', period: '2ヵ月' },
+    { name: 'Firebase', period: '4ヵ月' },
     { name: 'Python', period: '2年' },
-    { name: 'Git/Github', period: '' },
+    { name: 'Git/Github', period: '7ヵ月' },
   ];
   return (
     <div className={classes.root} id="skills">
@@ -64,18 +90,28 @@ const Skills = () => {
       <Grid className={classes.grid} container spacing={3}>
         {skills.map((skill) => {
           return (
-            <Grid item xs={6} className={classes.gridItem}>
-              ・{skill.name}　{skill.period}
-            </Grid>
+            <>
+              <Grid item xs={3} className={classes.gridItem}>
+                ・{skill.name}
+              </Grid>
+              <Grid item xs={3} className={classes.gridItem2}>
+                {skill.period}
+              </Grid>
+            </>
           );
         })}
       </Grid>
       <Grid className={classes.grid2} container spacing={3}>
         {skills.map((skill) => {
           return (
-            <Grid item xs={12} className={classes.gridItem}>
-              ・{skill.name}　{skill.period}
-            </Grid>
+            <>
+              <Grid item xs={6} className={classes.gridItem3}>
+                ・{skill.name}
+              </Grid>
+              <Grid item xs={6} className={classes.gridItem4}>
+                　{skill.period}
+              </Grid>
+            </>
           );
         })}
       </Grid>

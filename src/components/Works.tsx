@@ -4,12 +4,10 @@ import {
   Button,
   Card,
   CardHeader,
-  CardMedia,
   CardContent,
   Chip,
   Grid,
   MobileStepper,
-  Paper,
   Typography,
   Link,
 } from '@material-ui/core';
@@ -23,24 +21,30 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   title: {
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'left',
     marginTop: '50px',
     marginBottom: '30px',
     fontSize: '48px',
+    borderBottom: '3px solid black',
+    width: '700px',
+    margin: '0 auto',
+    ['@media(max-width:1024px)']: {
+      width: '90%',
+    },
   },
   grid: {
-    width: '800px',
+    width: '730px',
     margin: '0 auto',
     ['@media(max-width:1024px)']: {
       display: 'none',
     },
   },
   grid2: {
-    width: '100%',
-    margin: '0 auto',
+    width: '96%',
     display: 'none',
     ['@media(max-width:1024px)']: {
-      display: 'inline-block',
+      display: 'block',
+      margin: '0 auto',
     },
   },
   gridItem: {
@@ -57,7 +61,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginLeft: '-10px',
   },
   label2: {
-    // fontFamily: 'Helvetica',
     fontSize: '16px',
     margin: '10px 10px',
   },
@@ -66,9 +69,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     maxWidth: '100%',
     height: 'auto',
     backfaceVisibility: 'hidden',
-
-    // overflow: 'hidden',
-    // width: '100%',
   },
 }));
 const Works = () => {
@@ -81,7 +81,7 @@ const Works = () => {
         'TypeScript',
         'React(React Hook)',
         'Redux(Redux Toolkit)',
-        'Nextjs',
+        'Next.js',
         'CloudFireStore(Firebase)',
         'Vercel(hosting)',
         'Adobe XD',
@@ -92,11 +92,6 @@ const Works = () => {
         '/static/img3.png',
         '/static/img6.png',
         '/static/img7.png',
-        // '/static/img9.png',
-        // '/static/img10.png',
-        // '/static/img8.png',
-        // '/static/img11.png',
-        // '/static/img12.png',
         '/static/img4.png',
         '/static/img5.png',
       ],
@@ -105,7 +100,7 @@ const Works = () => {
           メモ機能がついたオンラインブックマークアプリを作成しました。
           <br />
           <br />{' '}
-          作成した理由としては、PCだけでなくスマホでも使いたかったからのと、重要な部分などをメモを残したかったからです。
+          作成した理由としては、私がPCだけでなくスマホでも使いたかったからのと、重要な部分などをメモを残したかったからです。
           <br />
           <br />
           こだわった部分としては、メモ機能にマーダウン記法を適応できるようにしました。
@@ -126,7 +121,10 @@ const Works = () => {
           {/* <Link href="https://book-mark-app.vercel.app">BookMarkAppサイト</Link> */}
           <br />
           <br />
-          <Link href="https://github.com/ken2pg/BookMark-App">Github</Link>
+          コード公開：
+          <Link underline="none" href="https://github.com/ken2pg/BookMark-App">
+            Github
+          </Link>
         </>
       ),
     },
@@ -143,7 +141,7 @@ const Works = () => {
           以下の機能をチームで作りました。
           <br />
           <br />
-          ・簡単検索機能
+          ・簡単検索機能(大学の場所や通学方法、家賃の希望額を元に検索)
           <br />
           <br />
           ・地域での検索
@@ -155,9 +153,9 @@ const Works = () => {
           ・物件詳細
           <br />
           <br />
-          私は、検索結果画面/詳細検索とクエリの受け取り部分の実装を担当しました。
+          私は、検索結果画面/詳細検索と検索条件クエリの受け取り部分の実装を担当しました。
           <br />
-          VueやVuetifyを使った実践的な開発が初めてだったので、Vuetifyを使った開発や、Vuejsのクエリ、APIの使い方に苦戦しましたが、
+          VueやVuetifyを使った実践的な開発が初めてだったので、Vuetifyを使った開発や、Vuejsのクエリの実装部分、APIの使い方に苦戦しましたが、
           チームの人やメンター相談しながら最終的には完成させることができました。
           <br />
           <br />
