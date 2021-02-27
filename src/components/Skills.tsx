@@ -82,14 +82,15 @@ const Skills = () => {
   const classes = useStyles();
   const skills = [
     { name: 'JavaScript', period: '2ヵ月' },
-    { name: 'TypeScript', period: '6ヵ月' },
-    { name: 'React', period: '7ヵ月' },
+    { name: 'TypeScript', period: '9ヵ月' },
+    { name: 'React', period: '9ヵ月' },
     { name: 'Vue.js', period: '1ヵ月' },
     { name: 'Redux', period: '6ヵ月' },
     { name: 'Next.js', period: '2ヵ月' },
+    { name: 'PHP', period: '1ヵ月' },
     { name: 'Firebase', period: '4ヵ月' },
-    { name: 'Python', period: '2年' },
-    { name: 'Git/Github', period: '7ヵ月' },
+    { name: 'Python', period: '2年半' },
+    { name: 'Git/Github', period: '11ヵ月' },
   ];
   return (
     <div className={classes.root} id="skills">
