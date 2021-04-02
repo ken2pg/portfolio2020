@@ -20,6 +20,18 @@ const useStyles = makeStyles((theme: Theme) => ({
       width: '90%',
     },
   },
+  text: {
+    display: 'flex',
+    justifyContent: 'left',
+    width: '700px',
+    margin: '0 auto',
+    fontSize: '28px',
+    marginBottom: '40px',
+    fontWeight: 'bold',
+    ['@media(max-width:1024px)']: {
+      width: '90%',
+    },
+  },
   grid: {
     width: '700px',
     wordWrap: 'break-word',
@@ -92,14 +104,15 @@ const Skills = () => {
     { name: 'Next.js', period: '2ヵ月' },
     { name: 'PHP', period: '1ヵ月' },
     { name: 'Firebase', period: '4ヵ月' },
-    { name: 'AWS Amplify', period: '最近' },
-    { name: 'AWS Cognite', period: '最近' },
-    { name: 'AWS AppSync', period: '最近' },
+    { name: 'AWS Amplify', period: '1ヵ月未満' },
+    { name: 'AWS Cognite', period: '1ヵ月未満' },
+    { name: 'AWS AppSync', period: '1ヵ月未満' },
     { name: 'Git/Github', period: '11ヵ月' },
   ];
   return (
     <div className={classes.root} id="skills">
       <Typography className={classes.title}>Skills</Typography>
+      <Typography className={classes.text}>使用したことがある言語・ライブラリ等</Typography>
       <Grid className={classes.grid} container spacing={3}>
         {skills.map((skill) => {
           return (
