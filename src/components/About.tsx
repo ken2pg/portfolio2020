@@ -142,18 +142,24 @@ const About = () => {
         </Grid>
       </div>
       <div className={classes.contents}>
+        <Typography className={classes.subtitle}>研究</Typography>
+        <Typography className={classes.ExperienceTitle}>深層学習を用いた行動認識</Typography>
+        <Typography className={classes.text2}>
+          私の研究テーマは深層学習と呼ばれる人工知能分野の１技術と骨格データと呼ばれる人間の骨格の位置を表すデータを利用した、「人間の行動を認識させるモデル」の研究しております。
+        </Typography>
+      </div>
+      <div className={classes.contents}>
         <Typography className={classes.subtitle}>インターン経験</Typography>
         <Typography className={classes.ExperienceTitle}>
           株式会社いい生活　 サマーインターン(有給) 2020/08
         </Typography>
         <Typography className={classes.text2}>
-          Vuejsと会社のAPIを用いてチームで不動産サイトを開発しました。
-          webエンジニアの業務もチーム開発な為、
-          チームでの開発の進め方を経験することで仕事の理解が深まるのではないかと思ったため参加しました。
-          インターンを通して、要件設計の仕方やチームでのgitを使った開発、
-          ペアプロなど貴重な経験することができました。
-          またチームで問題点(自分が躓いている部分など)の共有を行い、
-          相談したり意見交換をすることがチーム開発の良さであること知り、チーム内で情報を共有することの大切さを学びました。
+          私含め様々な大学の学生4人で、1週間という期間で住宅物件サイトを開発しました。
+          インターンに参加した動機は、webエンジニアに興味があり、チームでの開発の進め方を経験することで仕事の理解が深まるのではないかと思ったため参加しました。
+          具体的には、「大学生の為の住宅物件検索サイト」をVuejsと呼ばれるJavscriptライブラリと会社のAPIを用いて開発を行いました。
+          1週間という短い期間で完成させることにかなり苦労しましたが、チームで困ったこと・躓いている部分がないかを互いに確認し、
+          知っている領域であれば教えたり・サポートしたり、分からない部分に関しては他のチームメンバーに相談しりすることで問題を解決していきました。
+          最終的には1週間で完成させることが出来ました。
         </Typography>
       </div>
     </div>
