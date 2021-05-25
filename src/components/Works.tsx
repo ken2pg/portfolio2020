@@ -80,8 +80,6 @@ const Works = () => {
       label: [
         'TypeScript',
         'React Hooks',
-        'Redux Toolkit',
-        'Next.js',
         'CloudFireStore(Firebase)',
         'Vercel(hosting)',
         'Adobe XD',
@@ -169,6 +167,30 @@ const Works = () => {
           <br />
           <br />
           ※APIが会社の物であり守秘義務のため、コードと写真は公開しておりません。
+        </>
+      ),
+    },
+    {
+      name: 'QAサイト',
+      label: ['Django', 'MySQL', 'bootstrap', 'AdobeXD'],
+      imgList: [],
+      detail: (
+        <>
+          大学の授業で、生徒が教師・TA(Teaching Assistant)に質問できるサイトを9人で開発。
+          <br />
+          <br />
+          機能は以下の通りです。
+          <br />
+          <br />
+          ・ログイン、ユーザー登録
+          <br />
+          <br />
+          ・質問作成、編集、削除
+          <br />
+          <br />
+          ・質問に対する回答の作成
+          <br />
+          <br />
         </>
       ),
     },

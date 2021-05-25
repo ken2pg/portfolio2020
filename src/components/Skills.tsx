@@ -93,21 +93,25 @@ const useStyles = makeStyles((theme: Theme) => ({
 const Skills = () => {
   const classes = useStyles();
   const skills = [
-    { name: 'Python', period: '2年半' },
+    { name: 'Python', period: '3年' },
     { name: 'Pytorch', period: '半年' },
     { name: 'Keras', period: '半年' },
+    { name: 'Django', period: '2ヵ月' },
     { name: 'JavaScript', period: '2ヵ月' },
-    { name: 'TypeScript', period: '10ヵ月' },
-    { name: 'React', period: '11ヵ月' },
+    { name: 'TypeScript', period: '1年' },
+    { name: 'React', period: '1年' },
     { name: 'Vue.js', period: '1ヵ月' },
-    { name: 'Redux', period: '6ヵ月' },
+    { name: 'Redux', period: '半年' },
     { name: 'Next.js', period: '2ヵ月' },
     { name: 'PHP', period: '1ヵ月' },
+    { name: 'Java', period: '1年' },
+    { name: 'Kotolin', period: '1ヵ月未満' },
+    { name: 'Haskell', period: '半年' },
     { name: 'Firebase', period: '4ヵ月' },
     { name: 'AWS Amplify', period: '1ヵ月未満' },
     { name: 'AWS Cognite', period: '1ヵ月未満' },
     { name: 'AWS AppSync', period: '1ヵ月未満' },
-    { name: 'Git/Github', period: '11ヵ月' },
+    { name: 'Git/Github', period: '1年' },
   ];
   return (
     <div className={classes.root} id="skills">
