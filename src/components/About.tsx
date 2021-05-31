@@ -95,10 +95,10 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 const contents = [
-  { type: '名前', text: 'けんと' },
+  { type: '名前', text: 'ken2' },
   { type: '職業', text: '情報科学系の大学院　修士1年' },
-  { type: '研究', text: '深層学習、行動認識' },
-  { type: '趣味', text: 'webアプリ開発、イラスト、音楽、最近は筋トレ' },
+  { type: '研究キーワード', text: '人工知能　機械学習　深層学習、行動認識' },
+  { type: '趣味', text: 'プログラミング、イラスト、音楽、最近は筋トレ' },
 ];
 
 const About = () => {
@@ -118,10 +118,6 @@ const About = () => {
                     {content.type}：{content.text}
                   </Typography>
                 </Grid>
-                {/* <Grid item xs={6} className={classes.gridItem2}>
-                  <Typography className={classes.text}></Typography>
-                </Grid>
-                <Grid item xs={4} className={classes.gridItem2}></Grid> */}
               </>
             );
           })}
@@ -132,12 +128,6 @@ const About = () => {
                 Githubページ
               </Link>
             </Grid>
-            {/* <Grid item xs={6} className={classes.gridItem2}>
-              <Link underline="none" href="https://github.com/ken2pg">
-                Githubページ
-              </Link>
-            </Grid>
-            <Grid item xs={4} className={classes.gridItem2}></Grid> */}
           </>
         </Grid>
       </div>
@@ -157,7 +147,7 @@ const About = () => {
           私含め様々な大学の学生4人で、1週間という期間で住宅物件サイトを開発しました。
           インターンに参加した動機は、webエンジニアに興味があり、チームでの開発の進め方を経験することで仕事の理解が深まるのではないかと思ったため参加しました。
           具体的には、「大学生の為の住宅物件検索サイト」をVue.jsと呼ばれるJavascriptライブラリと会社のAPIを用いて開発を行いました。
-          1週間という短い期間で完成させることにかなり苦労しましたが、チームで困ったこと・躓いている部分がないかを確認し、
+          1週間という短い期間で完成させることに大変苦労しましたが、チームで困ったこと・躓いている部分がないかを確認し、
           私が知っている領域であれば教えたり、分からない部分に関しては他の人に協力をお願いしたりして、取り組むことで問題を解決していきました。
           結果、最終的には1週間で完成させることが出来ました。
         </Typography>

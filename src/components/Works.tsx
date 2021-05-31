@@ -77,13 +77,7 @@ const Works = () => {
   const works = [
     {
       name: 'BookMark App',
-      label: [
-        'TypeScript',
-        'React Hooks',
-        'CloudFireStore(Firebase)',
-        'Vercel(hosting)',
-        'Adobe XD',
-      ],
+      label: ['TypeScript', 'React', 'CloudFireStore(Firebase)', 'Adobe XD'],
       imgList: [
         '/static/img1.png',
         '/static/img2.png',
@@ -91,7 +85,7 @@ const Works = () => {
         '/static/img6.png',
         '/static/img7.png',
         '/static/img4.png',
-        '/static/img5.png',
+        // '/static/img5.png',
       ],
       detail: (
         <>
@@ -153,7 +147,7 @@ const Works = () => {
           <br />
           <br />
           私は、検索結果画面/詳細検索と検索条件クエリの受け取り部分の実装を担当しました。
-          工夫したところは、
+          開発の進め方で工夫したところは、
           <br />
           <br />
           ・FigumaでUIや状態遷移図を設計
@@ -167,6 +161,18 @@ const Works = () => {
           <br />
           <br />
           ※APIが会社の物であり守秘義務のため、コードと写真は公開しておりません。
+        </>
+      ),
+    },
+    {
+      name: 'TA出勤管理表記述システム',
+      label: ['Python', 'openpyxl'],
+      imgList: [],
+      detail: (
+        <>
+          TAの出勤表の記述を自動で記述し出力するシステムをpythonで開発。TAはTeach
+          Assistantの略で大学教員をアシストするアルバイトです。
+          毎回同じ部分を繰り返し記述する作業をプログラミングで効率化できると考え開発しました。
         </>
       ),
     },
